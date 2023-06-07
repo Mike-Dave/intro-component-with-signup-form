@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <link rel="stylesheet" href="public/output.css" />
+  </head>
+
+  <script defer src="script.js"></script>
+  <body
+    class="container mx-auto bg-red bg-[url('../images/bg-intro-mobile.png')] md:bg-[url('../images/bg-intro-desktop.png')]"
+  >
+    <main class="flex flex-col md:flex-row items-center min-h-screen">
+      <!-- FIRST SECTION AREA -->
+      <section id="first-section" class="leading-6 text-center mb-6 text-white">
+        <h1
+          class="text-3xl text-center mt-10 font-bold pb-2 md:text-5xl md:text-left md:mt-28"
+        >
+          Learn to code by <span class="block">watching others</span>
+        </h1>
+        <p
+          class="m-4 px-3 text-lg md:text-left md:px-0 md:pr-7 md:pt-7 md:m-0 md:text-base"
+        >
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+
+      <!-- SECOND SECTION AREA -->
+      <section
+        id="second-section"
+        class="flex flex-col gap-5 items-center pb-8 md:pb-0"
+      >
+        <div class="pt-4">
+          <p
+            class="p-4 pr-20 pl-20 text-center bg-blue rounded-lg text-sm text-white md:pr-18 md:mx- box-shadow"
+          >
+            <span class="font-bold">Try it free 7 days</span> then
+            <span class="block md:inline">$20/mo. thereafter</span>
+          </p>
+        </div>
+
+        <!-- FORM AREA -->
+        <form
+          class="space-y-4 p-6 bg-white rounded-lg pb-3 md:p-7 md:w-[440px] box-shadow"
+        >
+          <!-- FIRST NAME AREA -->
+          <div class="md:px w-full relative">
+            <input
+              class="outline outline-slate-100 p-3 w-full placeholder:font-bold placeholder:p-2 placeholder:text-sm focus:outline-black rounded-sm"
+              type="text"
+              name="firstName"
+              id="firstNameArea"
+              placeholder="First Name"
+              required
+            />
+            <img
+              id="firstNameErrorImage"
+              class="absolute top-3 right-5 hidden"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <p
+              id="firstNameErrorMessage"
+              class="text-xs text-right p-2 pb-0 text-red italic translate-x-2 hidden"
+            >
+              First Name cannot be empty
+            </p>
+          </div>
+          <!-- LAST NAME AREA -->
+          <div class="relative">
+            <input
+              class="outline outline-slate-100 p-3 w-full placeholder:font-bold placeholder:p-2 placeholder:text-sm focus:outline-black rounded-sm"
+              type="text"
+              name="lastName"
+              id="lastNameArea"
+              placeholder="Last Name"
+              required
+            />
+            <img
+              id="lastNameErrorImage"
+              class="absolute top-3 right-5 hidden"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <p
+              id="lastNameErrorMessage"
+              class="text-xs text-right text-red p-2 pb-0 italic translate-x-2 hidden"
+            >
+              Last Name cannot be empty
+            </p>
+          </div>
+          <!-- EMAIL ADDRESS AREA -->
+          <div class="relative">
+            <input
+              class="outline outline-slate-100 p-3 w-full placeholder:font-bold placeholder:p-2 placeholder:text-sm focus:outline-black rounded-sm"
+              type="email"
+              name="email"
+              id="emailArea"
+              placeholder="Email Address"
+            />
+            <img
+              id="emailErrorImage"
+              class="absolute top-3 right-5 hidden"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <p
+              id="emailErrorMessage"
+              class="text-xs text-right text-red p-2 pb-0 italic translate-x-2 hidden"
+            >
+              Looks like this is not an email
+            </p>
+          </div>
+          <!-- PASSWORD AREA -->
+          <div class="relative">
+            <input
+              class="outline outline-slate-100 p-3 w-full placeholder:font-bold placeholder:p-2 placeholder:text-sm focus:outline-black rounded-sm"
+              type="password"
+              name="password"
+              id="passwordArea"
+              placeholder="Password"
+            />
+            <img
+              id="passwordErrorImage"
+              class="absolute top-3 right-5 hidden"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <p
+              id="passwordErrorMessage"
+              class="text-xs text-right text-red p-2 pb-0 italic translate-x-2 hidden"
+            >
+              Password cannot be empty
+            </p>
+          </div>
+          <!-- BUTTON AREA -->
+          <button
+            id="btn"
+            class="p-4 text-center bg-green w-full rounded-lg text-white uppercase font-medium text-sm px-12 btn-box-shadow"
+          >
+            Claim your free trial
+          </button>
+          <p
+            class="text-[0.7rem] text-center leading-5 text-darkBlue md:text-[.65rem] md:px-5"
+          >
+            <span class="block md:inline">
+              By clicking the button, you are agreeing to</span
+            >
+            our <span class="font-bold text-red">Terms and Services</span>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
