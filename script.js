@@ -26,6 +26,8 @@ const emailErrorImage = document.getElementById("emailErrorImage");
 // EMAIL REGEX
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// For valid Input
+const validInput = document.getElementById("validInput");
 // To check for error
 const errorInfo = function (
   contentArea,
@@ -61,20 +63,30 @@ submitBtn.addEventListener("click", function (e) {
   let lastNameAreaValue = lastNameArea.value;
   let passwordAreaValue = passwordArea.value;
   let emailValue = emailArea.value;
+  let isValid = true;
 
   if (firstNameAreaValue === "") {
     errorInfo(firstNameArea, firstNameErrorImage, firstNameErrorMessage);
+    isValid = false;
   }
   if (lastNameAreaValue === "") {
     errorInfo(lastNameArea, lastNameErrorImage, lastNameErrorMessage);
+    isValid = false;
   }
 
   if (!emailRegex.test(emailValue)) {
     errorInfo(emailArea, emailErrorImage, emailErrorMessage);
+    isValid = false;
   }
 
   if (passwordAreaValue === "") {
     errorInfo(passwordArea, passwordErrorImage, passwordErrorMessage);
+    isValid = false;
+  }
+
+  if (isValid) {
+    // If all inputs are correct
+    validInput.classList.remove("hidden");
   }
 });
 
